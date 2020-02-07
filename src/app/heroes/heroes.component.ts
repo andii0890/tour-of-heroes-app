@@ -15,7 +15,7 @@ constructor() {}
 
 ngOnInit() {}
 
-onselect(hero: Hero): void {
+onSelect(hero: Hero): void {
   this.selectedHero = hero;
   }
 }
