@@ -14,6 +14,10 @@ selectedHero: Hero;
 
 constructor(private heroService: HeroService, private messageService: MessageService) {}
 
+getHeroes(): void {
+  this.heroes = this.heroService.getHeroes();
+}
+
 ngOnInit() {}
 
 onSelect(hero: Hero): void {
