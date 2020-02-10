@@ -18,7 +18,9 @@ getHeroes(): void {
   this.heroes = this.heroService.getHeroes();
 }
 
-ngOnInit() {}
+ngOnInit() {
+  this.getHeroes();
+}
 
 onSelect(hero: Hero): void {
   this.selectedHero = hero;
