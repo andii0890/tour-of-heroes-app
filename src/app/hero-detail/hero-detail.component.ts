@@ -9,6 +9,7 @@ import { Hero } from '../hero';
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
 })
+
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
   constructor(
@@ -25,7 +26,9 @@ export class HeroDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroService.getHero(id)
     .subscribe(hero => this.hero = hero);
-
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }
